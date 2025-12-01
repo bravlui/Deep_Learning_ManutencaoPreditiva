@@ -1,0 +1,76 @@
+{
+    "classification_features": [
+        "Type",
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]"
+    ],
+    "regression_features": [
+        "Type",
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]"
+    ],
+    "classification_features_cleaned": [
+        "Type",
+        "Air temperature K",
+        "Process temperature K",
+        "Rotational speed rpm",
+        "Torque Nm",
+        "Tool wear min"
+    ],
+    "regression_features_cleaned": [
+        "Type",
+        "Air temperature K",
+        "Process temperature K",
+        "Rotational speed rpm",
+        "Torque Nm"
+    ],
+    "original_columns": [
+        "Type",
+        "Air temperature [K]",
+        "Process temperature [K]",
+        "Rotational speed [rpm]",
+        "Torque [Nm]",
+        "Tool wear [min]",
+        "Target",
+        "Failure Type"
+    ],
+    "column_aliases": {
+        "type": "Type",
+        "tipo": "Type",
+        "tipo maquina": "Type",
+        "air temperature [k]": "Air temperature [K]",
+        "air temperature k": "Air temperature [K]",
+        "air_temp_k": "Air temperature [K]",
+        "temperatura ar": "Air temperature [K]",
+        "process temperature [k]": "Process temperature [K]",
+        "process temperature k": "Process temperature [K]",
+        "process_temp_k": "Process temperature [K]",
+        "temperatura processo": "Process temperature [K]",
+        "rotational speed [rpm]": "Rotational speed [rpm]",
+        "rotational speed rpm": "Rotational speed [rpm]",
+        "rotation_rpm": "Rotational speed [rpm]",
+        "velocidade": "Rotational speed [rpm]",
+        "rpm": "Rotational speed [rpm]",
+        "torque [nm]": "Torque [Nm]",
+        "torque nm": "Torque [Nm]",
+        "torque_nm": "Torque [Nm]",
+        "torque": "Torque [Nm]",
+        "tool wear [min]": "Tool wear [min]",
+        "tool wear min": "Tool wear [min]",
+        "tool_wear_min": "Tool wear [min]",
+        "desgaste": "Tool wear [min]",
+        "desgaste ferramenta": "Tool wear [min]",
+        "target": "Target",
+        "falha": "Target",
+        "machine failure": "Target",
+        "failure type": "Failure Type",
+        "failure_type": "Failure Type",
+        "tipo de falha": "Failure Type"
+    },
+    "columns_prompt": "\nCONTEXTO DO DATASET - COLUNAS DISPONÍVEIS:\n\nO dataset de manutenção preditiva contém as seguintes colunas oficiais (use sempre estes nomes exatos):\n\nType, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min], Target, Failure Type\n\nDESCRIÇÃO DAS COLUNAS PRINCIPAIS:\n- Type: Tipo de máquina (L, M, H)\n- Air temperature [K]: Temperatura do ar em Kelvin\n- Process temperature [K]: Temperatura do processo em Kelvin  \n- Rotational speed [rpm]: Velocidade rotacional em RPM\n- Torque [Nm]: Torque em Newton-metro\n- Tool wear [min]: Desgaste da ferramenta em minutos\n- Target: Indica se houve falha (1) ou não (0)\n- Failure Type: Tipo específico de falha (se aplicável)\n\nALIAS RECONHECIDOS (mapeamento automático):\nO sistema reconhece automaticamente os seguintes sinônimos para cada coluna:\n{\n  \"type\": \"Type\",\n  \"tipo\": \"Type\",\n  \"tipo maquina\": \"Type\",\n  \"air temperature [k]\": \"Air temperature [K]\",\n  \"air temperature k\": \"Air temperature [K]\",\n  \"air_temp_k\": \"Air temperature [K]\",\n  \"temperatura ar\": \"Air temperature [K]\",\n  \"process temperature [k]\": \"Process temperature [K]\",\n  \"process temperature k\": \"Process temperature [K]\",\n  \"process_temp_k\": \"Process temperature [K]\",\n  \"temperatura processo\": \"Process temperature [K]\",\n  \"rotational speed [rpm]\": \"Rotational speed [rpm]\",\n  \"rotational speed rpm\": \"Rotational speed [rpm]\",\n  \"rotation_rpm\": \"Rotational speed [rpm]\",\n  \"velocidade\": \"Rotational speed [rpm]\",\n  \"rpm\": \"Rotational speed [rpm]\",\n  \"torque [nm]\": \"Torque [Nm]\",\n  \"torque nm\": \"Torque [Nm]\",\n  \"torque_nm\": \"Torque [Nm]\",\n  \"torque\": \"Torque [Nm]\",\n  \"tool wear [min]\": \"Tool wear [min]\",\n  \"tool wear min\": \"Tool wear [min]\",\n  \"tool_wear_min\": \"Tool wear [min]\",\n  \"desgaste\": \"Tool wear [min]\",\n  \"desgaste ferramenta\": \"Tool wear [min]\",\n  \"target\": \"Target\",\n  \"falha\": \"Target\",\n  \"machine failure\": \"Target\",\n  \"failure type\": \"Failure Type\",\n  \"failure_type\": \"Failure Type\",\n  \"tipo de falha\": \"Failure Type\"\n}\n\nREGRA CRÍTICA: \nAo receber uma consulta do usuário, PRIMEIRO identifique quais colunas estão sendo mencionadas \nusando o mapeamento de aliases acima. SEMPRE use os nomes oficiais das colunas ao chamar \nqualquer função do sistema. Se o usuário usar um sinônimo, converta automaticamente para \no nome oficial antes de prosseguir.\n\nEXEMPLOS DE CONVERSÃO:\n- \"temperatura ar\" → \"Air temperature [K]\"\n- \"rpm\" → \"Rotational speed [rpm]\" \n- \"desgaste\" → \"Tool wear [min]\"\n- \"falha\" → \"Target\"\n"
+}
